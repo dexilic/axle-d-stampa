@@ -109,7 +109,7 @@
             <p>
             &Scaron;ifra:</p>
             <img style="display: none;" id="kioskByCodeBusy" alt="Ucitava se..." src="/cs/Images/axle-d-map/ui-anim_basic_16x16.gif" />
-            <input type="text" maxlength="10" id="kiosk-search-code" onkeyup="kioskSearchCode_KeyUp();" />
+            <input type="text" maxlength="10" id="kiosk-search-code" onkeyup="searchKiosk(event);" />
             <div style="float: right;">
             <input type="button" onclick="findKioskByCodeAndZoomItOnMap();" value="Prikaži na mapi" />
             </div>

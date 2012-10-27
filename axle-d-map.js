@@ -286,8 +286,8 @@ function zoomKioskOnMap() {
     }
 }
 
-function kioskSearchCode_KeyUp() {
-    if (window.event && window.event.keyCode == 13) {
+function searchKiosk(e) {
+    if (e.keyCode == 13) { // Enter is pressed.
         findKioskByCodeAndZoomItOnMap();
     }
 }
