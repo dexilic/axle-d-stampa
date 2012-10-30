@@ -1,0 +1,185 @@
+#axle-d-map
+{
+    font: Verdana, Arial, Tahoma;
+    font-family: Verdana;
+    font-size: inherit;
+    font-weight: bold;
+    color: #666666;
+	margin: 5px 5px 5px 10px;
+}
+
+#axle-d-map table tr
+{
+    vertical-align: top;    
+}
+
+#axle-d-map p
+{
+    margin: 5px 0 2px 0; 
+}
+
+#map
+{
+    width: 600px; 
+    height: 600px;
+    border: 2px solid #ED001F;
+    margin: 5px;
+}
+
+#mapLoading
+{
+    text-align: center;
+    margin: 260px 0px 0px 0px;
+}
+
+#kiosk-assistant
+{
+    margin: 5px;
+}
+
+#kiosk-info
+{
+    width: 300px;
+    height: 602px;
+    border: 2px solid #ED001F;
+    border-top-width: 0px;
+}
+
+#kiosk-info select
+{    
+    color: #666666;
+    /*color: #7c7c7c;*/
+    font-weight: bold;
+    background-color: #ededed;
+    width: 290px;    
+}
+
+#kiosk-info input[type=button]
+{
+    color: #666666;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 0 0 5px;   
+    
+    /*background-color: #ededed;
+    border: 1px solid #8c8c8c;
+    color: #7c7c7c; */
+}
+
+#kiosk-info .kiosk-separator
+{    
+    margin: 5px 0 5px 0;
+    border-bottom: 2px solid #ED001F;    
+}
+
+#kiosk-header
+{
+    color: #FFFFFF;
+    background-color: #ED001F;
+    font-weight: bold;
+}
+
+#kiosk-header table
+{
+    width: 100%;
+}
+
+#kiosk-image
+{
+    border-bottom: 2px solid #ED001F;    
+    padding: 0px;
+}
+
+#kiosk-image table
+{
+    width: 100%;
+}
+
+#kiosk-image td
+{
+    text-align: center;
+    vertical-align: middle;
+	padding: 12px 0 12px 0;
+}
+
+#kiosk-image img
+{
+    border: 1px solid #000000;
+}
+
+#kiosk-content
+{
+    padding: 5px;
+    height: 120px;
+}
+
+.kiosk-property
+{
+    color: #ED001F;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.kiosk-property-value
+{
+    color: #666666;
+    /*color: #7c7c7c;*/
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#kiosk-content #product
+{
+    margin: 10px 0 0 0;
+    width: 285px;
+}
+
+#kiosk-feedback
+{
+    margin: 20px 0px 10px 0px;
+}
+
+#kiosk-feedback table
+{
+    width: 100%;
+}
+
+#kiosk-feedback table td
+{
+    text-align: center;
+}
+
+.kiosk-search
+{
+    padding: 5px;   
+    font-size: 12px; 
+}
+
+.kiosk-search-title
+{
+    color: #ED001F;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid #ED001F;
+}
+
+#zoom-button
+{
+    margin: 10px 5px 5px 0;
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;    
+}
+
+.info-window-title
+{
+    color: #ED001F;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid #ED001F;
+}
+
+.ui-autocomplete-loading
+{
+    background: white url('/cs/Images/axle-d-map/ui-anim_basic_16x16.gif') right center no-repeat;
+}
