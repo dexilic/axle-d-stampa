@@ -1,0 +1,240 @@
+<div id="accordion">
+        <h3>
+            MAPA KIOSKA</h3>
+        <div id="axle-d-map">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="map">
+                                <div id="mapLoading">
+                                    <img alt="" src="/cs/images/axle-d-map/indicator.gif" /><br />
+                                    Mapa se ucitava...</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="kiosk-assistant">
+                                <div id="kiosk-info">
+                                    <div id="kiosk-header">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 65%;">
+                                                        KIOSK INFO
+                                                    </td>
+                                                    <td style="width: 35%; text-align: right; border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff;">
+                                                        <div id="kiosk-code">
+                                                            BROJ KIOSKA</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="kiosk-image">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img alt="&Scaron;TAMPA KIOSK" title="&Scaron;TAMPA KIOSK" src="/cs/Images/axle-d-map/BG932-116x100.jpg" />
+                                                    </td>
+                                                    <td>
+                                                        <img alt="&Scaron;TAMPA KIOSK" title="&Scaron;TAMPA KIOSK" src="/cs/Images/axle-d-map/Kucica-piktogram-116x100.gif" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="kiosk-content">
+                                        <p>
+                                            <span class="kiosk-property">ADRESA: </span><span id="kiosk-address" class="kiosk-property-value"></span>
+                                        </p>
+                                        <p>
+                                            <span class="kiosk-property">PONEDELJAK-PETAK: </span><span id="kiosk-working-time-from-Monday-to-Friday"
+                                                class="kiosk-property-value"></span>
+                                        </p>
+                                        <p>
+                                            <span class="kiosk-property">SUBOTA: </span><span id="kiosk-working-time-on-Saturday" class="kiosk-property-value">
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span class="kiosk-property">NEDELJA: </span><span id="kiosk-working-time-on-Sunday" class="kiosk-property-value">
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span class="kiosk-property">SLOBODAN DAN: </span><span id="kiosk-working-time-day-off" class="kiosk-property-value">
+                                            </span>
+                                        </p>
+                                        <div class="kiosk-separator">
+                                        </div>
+                                    </div>
+                                    <div id="kiosk-feedback">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div id="star">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <iframe scrolling="no" frameborder="0" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F184.168.105.200%2Fcs%2F&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
+                                                            style="border: medium none; overflow: hidden; width: 90px; height: 21px;" allowtransparency="true">
+                                                        </iframe>
+                                                    </td>
+                                                    <td>
+                                                        <input type="button" value="Va&scaron; utisak" onclick="openFeedbackForm();" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="kiosk-search">
+                                        <div class="kiosk-search-title">
+                                            Pronadi kiosk
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Grad/Naselje:<img src="/cs/Images/axle-d-map/ui-anim_basic_16x16.gif" alt="Ucitava se..." id="settBusy"
+                                                    style="display: none;" /></p>
+                                            <select id="settlements">
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Kiosk:<img src="/cs/Images/axle-d-map/ui-anim_basic_16x16.gif" alt="Ucitava se..." id="kioskBusy" style="display: none;" /></p>
+                                            <select id="kiosks">
+                                            </select>
+                                            <div id="zoom-button">
+                                                <input type="button" value="Prikaži na mapi" onclick="zoomKioskOnMap();" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="kiosk-search">
+                                        <div class="kiosk-search-title">
+                                            Pretraga po &scaron;ifri kioska
+                                        </div>
+                                        <div>
+                                            <p>
+                                                &Scaron;ifra:</p>
+                                            <img style="display: none;" id="kioskByCodeBusy" alt="Ucitava se..." src="/cs/Images/axle-d-map/ui-anim_basic_16x16.gif" />
+                                            <input type="text" maxlength="10" id="kiosk-search-code" onkeyup="searchKiosk(event);" />
+                                            <div style="float: right;">
+                                                <input type="button" onclick="findKioskByCodeAndZoomItOnMap();" value="Prikaži na mapi" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>
+            PODACI O KIOSKU</h3>
+        <div>
+            <div id="tabs" class="kiosk-tabs">
+                <ul>
+                    <li class="info-window-title"><a href="#tabs-1">INFO</a></li>
+                    <li class="info-window-title"><a href="#tabs-2">PRODAJA</a></li>
+                    <li class="info-window-title"><a href="#tabs-3">MARKETING</a></li>
+                    <li class="info-window-title"><a href="#tabs-4">ZAPOSLENI</a></li>
+                    <li class="info-window-title"><a href="#tabs-5">BEZBEDNOST</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>
+                        <span class="tab-kiosk-property">BROJ KIOSKA: </span><span id="tab-kiosk-code" class="tab-kiosk-property-value">
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">ADRESA: </span><span id="tab-kiosk-address" class="tab-kiosk-property-value">
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">PONEDELJAK-PETAK: </span><span id="tab-kiosk-working-time-monday-to-friday"
+                            class="tab-kiosk-property-value"></span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">SUBOTA: </span><span id="tab-kiosk-working-time-saturday" class="tab-kiosk-property-value">
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">NEDELJA: </span><span id="tab-kiosk-working-time-sunday" class="tab-kiosk-property-value">
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">SLOBODAN DAN: </span><span id="tab-kiosk-working-time-day-off" class="tab-kiosk-property-value">
+                        </span>
+                    </p>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="/cs/Images/axle-d-map/BG932-116x100.jpg" id="tab-kiosk-image-daily" alt="&Scaron;TAMPA KIOSK"
+                                            title="&Scaron;TAMPA KIOSK" style="border: 1px solid #000000; margin: 0px;" />
+                                    </td>
+                                    <td>
+                                        <img src="/cs/Images/axle-d-map/Kucica-piktogram-116x100.gif" id="tab-kiosk-image-nightly" alt="&Scaron;TAMPA KIOSK"
+                                            title="&Scaron;TAMPA KIOSK" style="border: 1px solid #000000; margin: 0px;" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="tabs-2">
+                    <p>
+                        <span class="tab-kiosk-property">DNEVNI PROMET: </span><span id="Span1" class="tab-kiosk-property-value">
+                            25.635,00 din.</span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">ARTIKAL SA NAJVECIM PROMETOM: </span><span id="Span2" class="tab-kiosk-property-value">
+                            Ice tea - 3.460,00 din.</span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">USLUGA SA NAJVECIM PROMETOM: </span><span id="Span3" class="tab-kiosk-property-value">
+                            Dopuna 064 - 5.500,00 din. </span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">PROSEK MESECNOG PROMETA: </span><span id="Span4" class="tab-kiosk-property-value">
+                            23.850,00 din.</span>
+                    </p>
+                </div>
+                <div id="tabs-3">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img alt="" src="/cs/Images/axle-d-map/SLIDER1.png" /></li>
+                            <li>
+                                <img alt="" src="/cs/Images/axle-d-map/SLIDER2.png" /></li>
+                            <li>
+                                <img alt="" src="/cs/Images/axle-d-map/SLIDER4.png" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tabs-4">
+                    <p>
+                        <span class="tab-kiosk-property">PREPODNEVNA SMENA: </span><span id="Span5" class="tab-kiosk-property-value">
+                            Milica Radic, broj zaposlenog: 4256</span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">POSLEPODNEVNA SMENA: </span><span id="Span6" class="tab-kiosk-property-value">
+                            Marko Dimitrijevic, broj zaposlenog: 1390</span>
+                    </p>
+                </div>
+                <div id="tabs-5">
+                    <p>
+                        <span class="tab-kiosk-property">BROJ PLJACKI U POSLEDNJIH 6 MESECI: </span><span id="Span7" class="tab-kiosk-property-value">
+                            3 pljacke.</span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">BROJ PROVALNIH KRA&ETH;A U POSLEDNJIH 6 MESECI: </span><span id="Span8"
+                            class="tab-kiosk-property-value">2 provalne krade.</span>
+                    </p>
+                    <p>
+                        <span class="tab-kiosk-property">BROJ PRONEVERA U POSLEDNJIH 6 MESECI: </span><span id="Span9" class="tab-kiosk-property-value">
+                            1 pronevera.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
